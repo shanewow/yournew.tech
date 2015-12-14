@@ -91,7 +91,7 @@ public class UserService {
     }
 
     public User createUserInformation(String login, String password, String firstName, String lastName, String email,
-        String langKey) {
+        String langKey, String address1, String address2, String city, String state, String zip, String country) {
 
         User newUser = new User();
         Authority authority = authorityRepository.findOne("ROLE_USER");
@@ -104,6 +104,14 @@ public class UserService {
         newUser.setLastName(lastName);
         newUser.setEmail(email);
         newUser.setLangKey(langKey);
+        
+        newUser.setAddress1(address1);
+        newUser.setAddress2(address2);
+        newUser.setCity(city);
+        newUser.setState(state);
+        newUser.setZip(zip);
+        newUser.setCountry(country);
+        
         // new user is not active
         newUser.setActivated(false);
         // new user gets registration key
@@ -122,6 +130,16 @@ public class UserService {
         user.setFirstName(managedUserDTO.getFirstName());
         user.setLastName(managedUserDTO.getLastName());
         user.setEmail(managedUserDTO.getEmail());
+        
+        
+        user.setAddress1(managedUserDTO.getAddress1());
+        user.setAddress2(managedUserDTO.getAddress2());
+        user.setCity(managedUserDTO.getCity());
+        user.setState(managedUserDTO.getState());
+        user.setZip(managedUserDTO.getZip());
+        user.setCountry(managedUserDTO.getCountry());
+        
+        
         if (managedUserDTO.getLangKey() == null) {
             user.setLangKey("en"); // default language is English
         } else {

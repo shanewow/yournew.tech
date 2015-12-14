@@ -5,7 +5,9 @@ import tech.yournew.domain.User;
 
 import org.hibernate.validator.constraints.Email;
 
+import javax.persistence.Column;
 import javax.validation.constraints.*;
+
 import java.util.Set;
 import java.util.stream.Collectors;
 /**
@@ -39,6 +41,24 @@ public class UserDTO {
 
     @Size(min = 2, max = 5)
     private String langKey;
+    
+    @Size(max = 50)
+    private String address1;
+    
+    @Size(max = 50)
+    private String address2;
+    
+    @Size(max = 50)
+    private String city;
+    
+    @Size(max = 50)
+    private String state;
+    
+    @Size(max = 9)
+    private String zip;
+    
+    @Size(max = 50)
+    private String country;
 
     private Set<String> authorities;
 
@@ -49,16 +69,24 @@ public class UserDTO {
         this(user.getLogin(), null, user.getFirstName(), user.getLastName(),
             user.getEmail(), user.getActivated(), user.getLangKey(),
             user.getAuthorities().stream().map(Authority::getName)
-                .collect(Collectors.toSet()));
+                .collect(Collectors.toSet()), user.getAddress1(), user.getAddress2(), 
+                user.getCity(), user.getState(), user.getZip(), user.getCountry());
     }
 
     public UserDTO(String login, String password, String firstName, String lastName,
-        String email, boolean activated, String langKey, Set<String> authorities) {
+        String email, boolean activated, String langKey, Set<String> authorities, 
+        String address1, String address2, String city, String state, String zip, String country) {
 
         this.login = login;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.address1 = address1;
+        this.address2 = address2;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+        this.country = country;
         this.email = email;
         this.activated = activated;
         this.langKey = langKey;
@@ -81,7 +109,55 @@ public class UserDTO {
         return lastName;
     }
 
-    public String getEmail() {
+    public String getAddress1() {
+		return address1;
+	}
+
+	public void setAddress1(String address1) {
+		this.address1 = address1;
+	}
+
+	public String getAddress2() {
+		return address2;
+	}
+
+	public void setAddress2(String address2) {
+		this.address2 = address2;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getZip() {
+		return zip;
+	}
+
+	public void setZip(String zip) {
+		this.zip = zip;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public String getEmail() {
         return email;
     }
 

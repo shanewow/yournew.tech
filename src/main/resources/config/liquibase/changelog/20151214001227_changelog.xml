@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+   <changeSet author="shanekearney (generated)" id="1450051955451-1">
+      <addColumn tableName="jhi_user">
+         <column name="address_1" type="varchar(50)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="shanekearney (generated)" id="1450051955451-2">
+      <addColumn tableName="jhi_user">
+         <column name="address_2" type="varchar(50)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="shanekearney (generated)" id="1450051955451-3">
+      <addColumn tableName="jhi_user">
+         <column name="city" type="varchar(50)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="shanekearney (generated)" id="1450051955451-4">
+      <addColumn tableName="jhi_user">
+         <column name="country" type="varchar(50)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="shanekearney (generated)" id="1450051955451-5">
+      <addColumn tableName="jhi_user">
+         <column name="state" type="varchar(50)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="shanekearney (generated)" id="1450051955451-6">
+      <addColumn tableName="jhi_user">
+         <column name="zip" type="varchar(9)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="shanekearney (generated)" id="1450051955451-7">
+      <dropUniqueConstraint constraintName="user_id" tableName="jhi_social_user_connection"/>
+   </changeSet>
+   <changeSet author="shanekearney (generated)" id="1450051955451-8">
+      <dropUniqueConstraint constraintName="user_id_2" tableName="jhi_social_user_connection"/>
+   </changeSet>
+</databaseChangeLog>

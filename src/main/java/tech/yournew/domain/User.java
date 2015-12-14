@@ -1,15 +1,18 @@
 package tech.yournew.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.validator.constraints.Email;
-
 import org.springframework.data.elasticsearch.annotations.Document;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import javax.xml.ws.soap.Addressing;
+
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -71,6 +74,29 @@ public class User extends AbstractAuditingEntity implements Serializable {
     @Column(name = "reset_date", nullable = true)
     private ZonedDateTime resetDate = null;
     
+    @Size(max = 50)
+    @Column(name = "address_1", length=50)
+    private String address1;
+    
+    @Size(max = 50)
+    @Column(name = "address_2", length=50)
+    private String address2;
+    
+    @Size(max = 50)
+    @Column(name = "city", length=50)
+    private String city;
+    
+    @Size(max = 50)
+    @Column(name = "state", length=50)
+    private String state;
+    
+    @Size(max = 9)
+    @Column(name = "zip", length=9)
+    private String zip;
+    
+    @Size(max = 50)
+    @Column(name = "country", length=50)
+    private String country;
 
     @JsonIgnore
     @ManyToMany
@@ -166,7 +192,55 @@ public class User extends AbstractAuditingEntity implements Serializable {
        this.resetDate = resetDate;
     }
 
-    public String getLangKey() {
+    public String getAddress1() {
+		return address1;
+	}
+
+	public void setAddress1(String address1) {
+		this.address1 = address1;
+	}
+
+	public String getAddress2() {
+		return address2;
+	}
+
+	public void setAddress2(String address2) {
+		this.address2 = address2;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getZip() {
+		return zip;
+	}
+
+	public void setZip(String zip) {
+		this.zip = zip;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public String getLangKey() {
         return langKey;
     }
 
