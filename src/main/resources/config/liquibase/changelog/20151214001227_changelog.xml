@@ -33,10 +33,4 @@
          <column name="zip" type="varchar(9)"/>
       </addColumn>
    </changeSet>
-   <changeSet author="shanekearney (generated)" id="1450051955451-7">
-      <dropUniqueConstraint constraintName="user_id" tableName="jhi_social_user_connection"/>
-   </changeSet>
-   <changeSet author="shanekearney (generated)" id="1450051955451-8">
-      <dropUniqueConstraint constraintName="user_id_2" tableName="jhi_social_user_connection"/>
-   </changeSet>
 </databaseChangeLog>
