@@ -23,7 +23,7 @@ spring:
         url: jdbc:mysql://localhost:3306/yournewtech?useUnicode=true&characterEncoding=utf8
         name:
         username: root
-        password:
+        password: root
     jpa:
         database-platform: org.hibernate.dialect.MySQLInnoDBDialect
         database: MYSQL
@@ -41,9 +41,6 @@ spring:
             cluster-nodes: localhost:9300
     mail:
         host: localhost
-        port: 25
-        username:
-        password:
     thymeleaf:
         cache: true
 
@@ -51,7 +48,7 @@ liquibase:
     contexts: prod
 
 server:
-    port: 8080
+    port: 80
     compression:
         enabled: true
         mime-types: text/html,text/xml,text/plain,text/css, application/javascript, application/json
@@ -74,7 +71,7 @@ jhipster:
         hazelcast:
             backupCount: 1
     mail: # specific JHipster mail property, for standard properties see MailProperties
-        from: yournewtech@localhost
+        from: noreply@yournew.tech
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
         spark:
