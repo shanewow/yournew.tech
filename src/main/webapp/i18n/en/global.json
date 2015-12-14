@@ -40,7 +40,23 @@
             "confirmpassword": "New password confirmation",
             "confirmpassword.placeholder": "Confirm the new password",
             "email": "E-mail",
-            "email.placeholder": "Your e-mail"
+            "email.placeholder": "Your e-mail",
+            "firstName": "First name",
+            "firstName.placeholder": "Your First Name",
+            "lastName": "Last name",
+            "lastName.placeholder": "Your Last Name",
+            "address1": "Address",
+            "address1.placeholder": "Your Addess",
+            "address2": "Address 2",
+            "address2.placeholder": "Address Cont.",
+            "city": "City",
+            "city.placeholder": "Your City",
+            "state": "State",
+            "state.placeholder": "Your State",
+            "zip": "Zip Code",
+            "zip.placeholder": "Your Zip Code",
+            "country": "Country",
+            "country.placeholder": "Your Country"
         },
         "messages": {
             "info": {
@@ -61,6 +77,46 @@
                     "required": "Your confirmation password is required.",
                     "minlength": "Your confirmation password is required to be at least 5 characters.",
                     "maxlength": "Your confirmation password cannot be longer than 50 characters."
+                },
+                "firstName": {
+                    "required": "Your first name is required.",
+                    "minlength": "Your first name is required to be at least 5 characters.",
+                    "maxlength": "Your first name cannot be longer than 50 characters."
+                },
+                "lastName": {
+                    "required": "Your last name is required.",
+                    "minlength": "Your last name is required to be at least 5 characters.",
+                    "maxlength": "Your last name cannot be longer than 50 characters."
+                },
+                "address1": {
+                    "required": "Your address1 is required.",
+                    "minlength": "Your address1 is required to be at least 5 characters.",
+                    "maxlength": "Your address1 cannot be longer than 50 characters."
+                },
+                "address2": {
+                    "required": "Your address2 is required.",
+                    "minlength": "Your address2 is required to be at least 5 characters.",
+                    "maxlength": "Your address2 cannot be longer than 50 characters."
+                },
+                "city": {
+                    "required": "Your city is required.",
+                    "minlength": "Your city is required to be at least 5 characters.",
+                    "maxlength": "Your city cannot be longer than 50 characters."
+                },
+                "state": {
+                    "required": "Your state is required.",
+                    "minlength": "Your state is required to be at least 5 characters.",
+                    "maxlength": "Your state cannot be longer than 50 characters."
+                },
+                "zip": {
+                    "required": "Your password is required.",
+                    "minlength": "Your password is required to be at least 5 characters.",
+                    "maxlength": "Your password cannot be longer than 50 characters."
+                },
+                "country": {
+                    "required": "Your country is required.",
+                    "minlength": "Your country is required to be at least 5 characters.",
+                    "maxlength": "Your country cannot be longer than 50 characters."
                 },
                 "email": {
                     "required": "Your e-mail is required.",

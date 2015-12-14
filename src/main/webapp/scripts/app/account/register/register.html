@@ -111,6 +111,144 @@
                         </p>
                     </div>
                 </div>
+                
+                
+                <div class="form-group">
+                    <label class="control-label" for="firstName" translate="global.form.firstName">First name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="{{'global.form.firstName.placeholder' | translate}}"
+                           ng-model="registerAccount.firstName" ng-maxlength=50 required>
+                    <div ng-show="form.firstName.$dirty && form.firstName.$invalid">
+                        <p class="help-block"
+                               ng-show="form.firstName.$error.required" translate="global.messages.validate.firstName.required">
+                            Your confirmation password is required.
+                        </p>
+                        <p class="help-block"
+                               ng-show="form.firstName.$error.maxlength" translate="global.messages.validate.firstName.maxlength">
+                            Your confirmation password cannot be longer than 50 characters.
+                        </p>
+                    </div>
+                </div>
+                
+                
+                <div class="form-group">
+                    <label class="control-label" for="lastName" translate="global.form.lastName">Last name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="{{'global.form.lastName.placeholder' | translate}}"
+                           ng-model="registerAccount.lastName" ng-maxlength=50 required>
+                    <div ng-show="form.lastName.$dirty && form.lastName.$invalid">
+                        <p class="help-block"
+                               ng-show="form.lastName.$error.required" translate="global.messages.validate.lastName.required">
+                            Your confirmation password is required.
+                        </p>
+
+                        <p class="help-block"
+                               ng-show="form.lastName.$error.maxlength" translate="global.messages.validate.lastName.maxlength">
+                            Your confirmation password cannot be longer than 50 characters.
+                        </p>
+                    </div>
+                </div>
+                
+                
+                <div class="form-group">
+                    <label class="control-label" for="address1" translate="global.form.address1">Address 1</label>
+                    <input type="text" class="form-control" id="address1" name="address1" placeholder="{{'global.form.address1.placeholder' | translate}}"
+                           ng-model="registerAccount.address1" ng-maxlength=50 required>
+                    <div ng-show="form.address1.$dirty && form.address1.$invalid">
+                        <p class="help-block"
+                               ng-show="form.address1.$error.required" translate="global.messages.validate.address1.required">
+                            Your confirmation password is required.
+                        </p>
+                        <p class="help-block"
+                               ng-show="form.address1.$error.maxlength" translate="global.messages.validate.address1.maxlength">
+                            Your confirmation password cannot be longer than 50 characters.
+                        </p>
+                    </div>
+                </div>
+                
+                
+                <div class="form-group">
+                    <label class="control-label" for="address2" translate="global.form.address2">Address 2</label>
+                    <input type="text" class="form-control" id="address2" name="address2" placeholder="{{'global.form.address2.placeholder' | translate}}"
+                           ng-model="registerAccount.address2" ng-maxlength=50>
+                    <div ng-show="form.address2.$dirty && form.address2.$invalid">
+                        <p class="help-block"
+                               ng-show="form.address2.$error.required" translate="global.messages.validate.address2.required">
+                            Your confirmation password is required.
+                        </p>
+                        <p class="help-block"
+                               ng-show="form.address2.$error.maxlength" translate="global.messages.validate.address2.maxlength">
+                            Your confirmation password cannot be longer than 50 characters.
+                        </p>
+                    </div>
+                </div>
+                
+                
+                <div class="form-group">
+                    <label class="control-label" for="city" translate="global.form.city">City</label>
+                    <input type="text" class="form-control" id="city" name="city" placeholder="{{'global.form.city.placeholder' | translate}}"
+                           ng-model="registerAccount.city" ng-maxlength=50 required>
+                    <div ng-show="form.city.$dirty && form.city.$invalid">
+                        <p class="help-block"
+                               ng-show="form.city.$error.required" translate="global.messages.validate.city.required">
+                            Your confirmation password is required.
+                        </p>
+                        <p class="help-block"
+                               ng-show="form.city.$error.maxlength" translate="global.messages.validate.city.maxlength">
+                            Your confirmation password cannot be longer than 50 characters.
+                        </p>
+                    </div>
+                </div>
+                
+                
+                <div class="form-group">
+                    <label class="control-label" for="state" translate="global.form.state">State</label>
+                    <input type="text" class="form-control" id="state" name="state" placeholder="{{'global.form.state.placeholder' | translate}}"
+                           ng-model="registerAccount.state" ng-maxlength=50 required>
+                    <div ng-show="form.state.$dirty && form.state.$invalid">
+                        <p class="help-block"
+                               ng-show="form.state.$error.required" translate="global.messages.validate.state.required">
+                            Your confirmation password is required.
+                        </p>
+                        <p class="help-block"
+                               ng-show="form.state.$error.maxlength" translate="global.messages.validate.state.maxlength">
+                            Your confirmation password cannot be longer than 50 characters.
+                        </p>
+                    </div>
+                </div>
+                
+                
+                <div class="form-group">
+                    <label class="control-label" for="zip" translate="global.form.zip">Zip code</label>
+                    <input type="text" class="form-control" id="zip" name="zip" placeholder="{{'global.form.zip.placeholder' | translate}}"
+                           ng-model="registerAccount.zip" ng-minlength=5 ng-maxlength=9 required>
+                    <div ng-show="form.zip.$dirty && form.zip.$invalid">
+                        <p class="help-block"
+                               ng-show="form.zip.$error.required" translate="global.messages.validate.zip.required">
+                            Your confirmation password is required.
+                        </p>
+                        <p class="help-block"
+                               ng-show="form.zip.$error.maxlength" translate="global.messages.validate.zip.maxlength">
+                            Your confirmation password cannot be longer than 50 characters.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="control-label" for="country" translate="global.form.country">Country</label>
+                    <input type="text" class="form-control" id="country" name="country" placeholder="{{'global.form.country.placeholder' | translate}}"
+                           ng-model="registerAccount.country" ng-maxlength=50 required>
+                    <div ng-show="form.country.$dirty && form.country.$invalid">
+                        <p class="help-block"
+                               ng-show="form.country.$error.required" translate="global.messages.validate.country.required">
+                            Your confirmation password is required.
+                        </p>
+                        <p class="help-block"
+                               ng-show="form.country.$error.maxlength" translate="global.messages.validate.country.maxlength">
+                            Your confirmation password cannot be longer than 50 characters.
+                        </p>
+                    </div>
+                </div>
+                
+                
 
                 <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary" translate="register.form.button">Register</button>
             </form>

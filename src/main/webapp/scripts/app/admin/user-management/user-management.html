@@ -17,6 +17,14 @@
                 <th translate="global.field.id">ID</th>
                 <th translate="user-management.login">Login</th>
                 <th translate="user-management.email">Email</th>
+                <th translate="user-management.firstName">First Name</th>
+                <th translate="user-management.lastName">Last Name</th>
+                <th translate="user-management.address1">Address 1</th>
+                <th translate="user-management.address2">Address 2</th>
+                <th translate="user-management.city">City</th>
+                <th translate="user-management.state">State</th>
+                <th translate="user-management.zip">Zip</th>
+                <th translate="user-management.country">Country</th>
                 <th></th>
                 <th translate="user-management.langKey">LangKey</th>
                 <th translate="user-management.profiles">Profiles</th>
@@ -31,6 +39,15 @@
                 <td><a ui-sref="user-management-detail({login:user.login})">{{user.id}}</a></td>
                 <td>{{user.login}}</td>
                 <td>{{user.email}}</td>
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.address1}}</td>
+                <td>{{user.address2}}</td>
+                <td>{{user.city}}</td>
+                <td>{{user.state}}</td>
+                <td>{{user.zip}}</td>
+                <td>{{user.country}}</td>
+                
                 <td>
                     <span class="label label-danger" ng-click="setActive(user, true)" ng-show="!user.activated"
                           translate="user-management.deactivated" style="cursor: pointer;">Desactivated</span>
